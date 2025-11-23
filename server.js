@@ -7,9 +7,9 @@ app.use(cors());
 app.use(express.json());
 
 // ENV variables (set these in Render)
-const GITHUB_TOKEN = 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; // PAT with repo access
-const GITHUB_OWNER = Kalyancds; // e.g. "your-github-username"
-const GITHUB_REPO = time-series-quiz;   // e.g. "time-series-quiz"
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN; // PAT with repo access
+const GITHUB_OWNER = process.env.GITHUB_OWNER; // e.g. "your-github-username"
+const GITHUB_REPO = process.env.GITHUB_REPO;   // e.g. "time-series-quiz"
 const RESULTS_PATH = "results.csv";
 const FEEDBACK_PATH = "feedback.csv";
 
